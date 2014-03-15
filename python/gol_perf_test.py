@@ -17,6 +17,8 @@ import gol5
 import gol6
 import gol7
 import gol8
+import gol9
+import gol10
 
 
 def test(modName, gridSize, numIterations):
@@ -45,6 +47,8 @@ def main():
     testInfiniteGrid("gol6", numIterations)
     testInfiniteGrid("gol7", numIterations)
     testFunctionalGrid("gol8", numIterations)
+    testFunctionalGrid("gol9", numIterations)
+    testFunctionalGrid("gol10", numIterations)
 
 if __name__ == '__main__':
     main()
