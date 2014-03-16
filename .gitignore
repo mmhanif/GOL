@@ -1,4 +1,25 @@
+# Python
 *.pyc
+
+# C++
 *.[oa]
 */build/
 
+# Scala
+*.class
+*.log
+
+# sbt specific
+.cache
+.settings/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+project/
+
+# Scala-IDE specific
+.metadata
+.classpath
+.project
