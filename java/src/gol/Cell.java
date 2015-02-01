@@ -35,7 +35,7 @@ public class Cell {
     }
 
     public String toString() {
-        return "(" + x + "'" + y + ")";
+        return "(" + x + "," + y + ")";
     }
 
     public Cell(int x, int y) {
