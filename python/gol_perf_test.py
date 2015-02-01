@@ -19,6 +19,7 @@ import gol7
 import gol8
 import gol9
 import gol10
+import gol11
 
 
 def test(modName, gridSize, numIterations):
@@ -36,19 +37,25 @@ def testFunctionalGrid(modName, numIterations):
     stmt  = "b = nextBoard(b)"
     print modName, ": ", timeit.timeit(stmt=stmt, setup=setup, number=numIterations)
 
+def testFunctionalGrid2(modName, numIterations):
+    setup = "from %s import nextBoard; b = set([(25,25), (24,25), (24,26), (25, 24), (26, 25)])" % modName
+    stmt  = "b = nextBoard(b)"
+    print modName, ": ", timeit.timeit(stmt=stmt, setup=setup, number=numIterations)
+
 def main():
-    gridSize = 500
-    numIterations = 50
+    gridSize = 100000
+    numIterations = 1000
     #test("gol1", gridSize, numIterations)
-    test("gol2", gridSize, numIterations)
+    #test("gol2", gridSize, numIterations)
     #test("gol3", gridSize, numIterations)
     #test("gol4", gridSize, numIterations)
     #test("gol5", gridSize, numIterations)
-    testInfiniteGrid("gol6", numIterations)
-    testInfiniteGrid("gol7", numIterations)
+    #testInfiniteGrid("gol6", numIterations)
+    #testInfiniteGrid("gol7", numIterations)
     testFunctionalGrid("gol8", numIterations)
-    testFunctionalGrid("gol9", numIterations)
-    testFunctionalGrid("gol10", numIterations)
+    #testFunctionalGrid("gol9", numIterations)
+    #testFunctionalGrid("gol10", numIterations)
+    testFunctionalGrid2("gol11", numIterations)
 
 if __name__ == '__main__':
     main()
